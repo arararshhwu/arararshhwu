@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arsha Firnamarszepti — Portfolio</title>
+  <style>
+    /* ===== GENERAL STYLE ===== */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #000000, #4b0000);
+      color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      transition: background 1s ease;
+    }
+
+    header {
+      padding: 40px 20px;
+      animation: fadeIn 1.5s ease;
+    }
+
+    img.profile-photo {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #ff0000;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    img.profile-photo:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(255, 0, 0, 0.9);
+    }
+
+    h2 {
+      color: #ff4d4d;
+      margin-top: 40px;
+      text-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+    }
+
+    p {
+      color: #e0e0e0;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin: 20px auto;
+      max-width: 800px;
+    }
+
+    .info-box {
+      background: rgba(30, 0, 0, 0.8);
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #ff0000;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .info-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+    }
+
+    a {
+      color: #ff4d4d;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #ffffff;
+      text-shadow: 0 0 10px #ff0000;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 8px 0;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      background: linear-gradient(90deg, #1a0000, #000000);
+      border-top: 1px solid #ff0000;
+    }
+
+    .social-links a {
+      margin: 0 10px;
+      font-size: 1.5rem;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      transform: scale(1.2);
+      color: #ff0000;
+    }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== BUTTON STYLE ===== */
+    .theme-toggle {
+      background: #ff0000;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 20px;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+      background: #ff4d4d;
+      transform: scale(1.05);
+    }
+
+    /* ===== DARK MODE ===== */
+    .dark-mode {
+      background: linear-gradient(135deg, #1a0000, #000000);
+      color: #f0f0f0;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img class="profile-photo" alt="Arsha Firnamarszepti" src="https://github.com/user-attachments/assets/770f219f-87f3-432d-8cbd-c717a8a2972d" />
+    <p>✨ Visual Artist • Content Animator • Writer ✨</p>
+    <button class="theme-toggle" id="themeButton">Toggle Theme</button>
+  </header>
+
+  <section id="about">
+    <h2>Personal Information</h2>
+    <div class="info-grid">
+      <div class="info-box fade-in"><strong>📅 Date of Birth:</strong> 12 July 2003</div>
+      <div class="info-box fade-in"><strong>📱 Phone:</strong> 05587213444</div>
+      <div class="info-box fade-in"><strong>📍 Location:</strong> Jawa Timur, Yogyakarta</div>
+      <div class="info-box fade-in"><strong>📸 Instagram:</strong> 
+        <a href="https://www.instagram.com/rshfirna?igsh=MW5oMW8yNmYycmxpcQ==" target="_blank" rel="noopener noreferrer">@rshfirna</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <ul>
+      <li>SD Muhammadiyah 7</li>
+      <li>Al-Ihsan Islamic Boarding School (MTS)</li>
+      <li>SMA KP Baleendah</li>
+      <li>Institut Seni Indonesia Yogyakarta (ISI Yogyakarta)</li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Visual Graphic Design (Digital Drawing, Traditional Drawing, Poster, Infographics, Banner, Advertising)</li>
+      <li>Content Animation</li>
+      <li>Content Creation</li>
+      <li>Writing</li>
+    </ul>
+  </section>
+
+  <section id="experience">
+    <h2>Experience & Achievements</h2>
+    <ul>
+      <li>🏆 1st Winner – FLS2N (District Level)</li>
+      <li>🏆 1st Winner – Calligraphy Competition (MTS Internal)</li>
+      <li>🥈 2nd Winner – Calligraphy Competition (MTS Internal)</li>
+      <li>🥉 3rd Winner – Calligraphy Competition (MTS Internal)</li>
+      <li>👔 Former Head of Public Relations – OSIS</li>
+      <li>🎨 Chief of Character Design – SEIIBU (Japanese Club)</li>
+      <li>✨ Additional freelance and creative project experiences</li>
+    </ul>
+  </section>
+
+  <section id="languages">
+    <h2>Languages</h2>
+    <ul>
+      <li>🇮🇩 Indonesian (Native)</li>
+      <li>🇬🇧 English (Second Language)</li>
+      <li>🇯🇵 Japanese (Basic)</li>
+      <li>🇸🇦 Arabic (Basic)</li>
+    </ul>
+  </section>
+
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <p style="font-size: 1.1rem; color: #d0d0d0;">Check out my full portfolio and amazing artworks:</p>
+    <a href="https://marszeportofolio.my.canva.site/speciality-in-narative-art" target="_blank" rel="noopener noreferrer" class="external-link">
+      🎨 Visit Portfolio → marszeportofolio.my.canva.site
+    </a>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="social-links">
+        <a href="https://www.instagram.com/rshfirna?igsh=MW5oMW8yNmYycmxpcQ==" target="_blank" rel="noopener noreferrer" title="Instagram">📸</a>
+        <a href="mailto:arsha@example.com" title="Email">✉️</a>
+      </div>
+      <p>© 2026 Arsha Firnamarszepti — All Rights Reserved</p>
+      <p style="font-size: 0.8rem; margin-top: 10px;">Crafted with passion ✨</p>
+    </div>
+  </footer>
+
+  <script>
+    // Fade-in animation on scroll
+    const fadeElements = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+    fadeElements.forEach(el => observer.observe(el));
+
+    // Theme toggle button
+    const themeButton = document.getElementById('themeButton');
+    themeButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
+</body>
+</html>
